@@ -14,6 +14,14 @@ io.on('connection', socket =>{
         socket.data.username = username;
         console.log(socket.data.username);
     })
+
+    socket.on('message', text => {
+        console.log("Mensagem recebida")
+        io.emit('received_message', {
+            text,
+            authorId: socket.id,
+            author: socket.data.username})
+    })
 })
 
 server.listen(PORT, () =>{

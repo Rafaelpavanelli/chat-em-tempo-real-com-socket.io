@@ -8,7 +8,8 @@ function App() {
   const[socket,setSocket]=useState(null);
   return (
     <>
-     <div className='app'>
+     <div className='bg-blue-300 w-screen'>
+      <h1>Chat em tempo real</h1>
       {
         chatVisibility?<Chat socket={socket}/>: <Join setChatVisibility={setChatVisibility} setSocket={setSocket}/>
       }

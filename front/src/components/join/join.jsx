@@ -11,7 +11,7 @@ export default function Join({setChatVisibility,setSocket}){
         setChatVisibility(true);
     }
     return(
-        <div>
+        <div className="join">
             <h1>join</h1>
             <input type="text" ref={usernameRef} placeholder="Nome de usuário"/>
             <button onClick={handleSubmit}>Entrar</button>
