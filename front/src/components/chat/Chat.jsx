@@ -28,7 +28,7 @@ export default function Chat({socket}){
             <div className="messages">
             {
                 messageList.map((message,index)=>(
-                <p key={index} className={message.authorId === socket.id? "author":"other"}>{message.author}{message.text}</p>
+                <p key={index} className={message.authorId === socket.id? "author":"other"}>{message.author}: {message.text}</p>
                 ))
             }
             </div>
